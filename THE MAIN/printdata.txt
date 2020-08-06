@@ -1,0 +1,53 @@
+
+<html>
+<body>
+<table id="result-table" border="1px">
+ <thead>
+ <tr> 
+ <th>Name</th>
+ <th>Phone</th>
+ </tr>
+ </thead>
+ <tbody id="tableBody">
+ </tbody>
+ </table>
+
+<script type=text/javascript>
+ getMyListData() ;
+ function getMyListData()
+ { 
+ var method = "GetListItems"; 
+ var webURL = $().SPServices.SPGetCurrentSite() ; 
+ var list = "trial_list"; 
+ var fieldsToRead = "<ViewFields>"+"<FieldRef Name='Name' />" +"</ViewFields>";
+ var query = "<Query><OrderBy><FieldRef Name='Name' Ascending='True' /></OrderBy></Query>";
+
+$().SPServices
+ ({
+ operation: method,
+ async: false, 
+ webURL: webURL,
+ listName: list,
+ CAMLViewFields: "<ViewFields Properties='True' />",
+ CAMLQuery: query, 
+ completefunc: function (xData, Status)
+ {
+ $(xData.responseXML).SPFilterNode("z:row").each(function() 
+ {
+ 
+ var NameV = $(this).attr("ows_Title");
+ var PhoneV = $(this).attr("ows_a1pm"); 
+
+$("#result-table").append("<tr align='middle'>" +
+ "<th>"+NameV+"</th>"+
+ "<th>"+PhoneV+"</th>" + 
+ "</tr>");
+ });
+ 
+ }
+ });
+ };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%@ Page Language="C#" %>
+<%@ Register tagprefix="SharePoint" namespace="Microsoft.SharePoint.WebControls" assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+<meta name="WebPartPageExpansion" content="full" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<SharePoint:CssRegistration Name="default" runat="server"/>
+<link rel="icon" type="image/png" href="https://mfg.spt.ford.com/sites/EFS4/SiteAssets/logo.png">
+<link rel="stylesheet" type="text/css" href="https://mfg.spt.ford.com/sites/EFS4/SitePages/css/w3.css">
+<link rel="stylesheet" type="text/css" href="https://mfg.spt.ford.com/sites/EFS4/SitePages/css/parallax.css">
+<link rel="stylesheet" type="text/css" href="https://mfg.spt.ford.com/sites/EFS4/SitePages/css/icon.css">
+<link rel="stylesheet" type="text/css" href="https://mfg.spt.ford.com/sites/EFS4/SitePages/css/scrollup.css">
+<link rel="stylesheet" type="text/css" href="https://mfg.spt.ford.com/sites/EFS4/SitePages/css/radiobutton.css">
+
+<title>Feedback Page</title>
+</head>
+
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="button"> Top</button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">WELCOME TO FORD EMPLOYEE FEEDBACK SYSTEM</span>
+  <p>
+  </p>
+  </div>
+</div>
+<f>
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">Employee Details</h3>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter CSID" name="usrnm"><br>
+  </div>
+   <div class="input-container2">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter First Name" name="fname">
+    <i class="fa fa-user icon"></i>
+       <input class="input-field" type="text" placeholder="Enter Last Name" name="fname"><br>
+  </div>
+    <div class="input-container2">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter Dept" name="dept">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter Team" name="team"><br>
+  </div>
+  <div class="input-container2">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter Grade" name="grade">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Reports to" name="report"><br>
+  </div>
+	 <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Enter Mobile Number" name="number"><br>
+  </div>
+
+  
+
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">WORK CULTURE</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>
+  Q1: How do you perceive your organization ?
+  <label class="container">The organization is a very personal place.  It is like an extended family.  People seem to share a lot of themselves
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The organization is a very dynamic entrepreneurial place.  People are willing to stick their necks out and take risks
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The organization is very results oriented.  A major concern is with getting the job done.  People are very competitive and achievement oriented
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The organization is a very controlled and structured place.  Formal procedures generally govern what people do
+
+
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+  </p>
+  </div>
+</div>
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>
+  Q2:What do you like the most about the workplace environment and what motivates you to come to work?
+   <label class="container">co-workers
+   <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">office ambience
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">office employee policies and privileges
+  <span class="checkmark"></span>
+</label>
+<label class="container">others(specify in textbox)
+
+
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+  </p>
+  </div>
+</div>
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">WORK CULTURE</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>
+  Q3: How do you perceive your superiors ?
+  <label class="container">The leadership in the organization is generally considered to exemplify mentoring, facilitating, or nurturing
+   <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The leadership in the organization is generally considered to exemplify entrepreneurship, innovating, or risk taking
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The leadership in the organization is generally considered to exemplify a no-nonsense, aggressive, results-oriented focus
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The leadership in the organization is generally considered to exemplify coordinating, organizing, or smooth-running efficiency
+
+
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+  </p>
+  </div>
+</div>
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">WORK CULTURE</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>
+  Q4: How would you describe your relationship with peers ? 
+   <label class="container">The glue that holds the organization together is loyalty and mutual trust.  Commitment to this organization runs high
+   <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The glue that holds the organization together is commitment to innovation and development.  There is an emphasis on being on the cutting edge
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The glue that holds the organization together is the emphasis on achievement and goal accomplishment.  Aggressiveness and winning are common themes
+  <span class="checkmark"></span>
+</label>
+<label class="container">The glue that holds the organization together is formal rules and policies.  Maintaining a smooth-running organization is important
+
+
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+  </p>
+  </div>
+</div>
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">WORK CULTURE</span>
+  </div>
+</div>
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>
+ Q5 : According to you what is considered a success in your organization ? 
+   <label class="container">The organization defines success on the basis of the development of human resources, teamwork, employee commitment, and concern for people
+      <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The organization defines success on the basis of having the most unique or newest products.  It is a product leader and innovator
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">The organization defines success on the basis of winning in the marketplace and outpacing the competition.  Competitive market leadership is key
+  <span class="checkmark"></span>
+</label>
+<label class="container">The organization defines success on the basis of efficiency.  Dependable delivery, smooth scheduling and low-cost production are critical
+
+
+
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+  </p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">COOL!</span>
+  </div>
+</div>
+</form>
+</body>
+
+</html>
